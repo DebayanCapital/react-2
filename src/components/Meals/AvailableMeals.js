@@ -12,7 +12,7 @@ const AvailableMeals = () => {
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
-        'https://react-http-6b4a6.firebaseio.com/meals.json'
+        'https://react-study-30b55-default-rtdb.firebaseio.com/meals.json'
       );
 
       if (!response.ok) {
@@ -31,7 +31,7 @@ const AvailableMeals = () => {
           price: responseData[key].price,
         });
       }
-
+      console.log(responseData);
       setMeals(loadedMeals);
       setIsLoading(false);
     };
